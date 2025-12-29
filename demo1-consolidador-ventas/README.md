@@ -159,41 +159,44 @@ demo1-consolidador-ventas/
 
 ## 📊 Ejemplo de Output
 
-### Dashboard con KPIs
+El script genera un archivo Excel profesional multi-hoja con análisis completos y visualizaciones de alta calidad.
 
-```
-┌─────────────────────────────────────────────────┐
-│  📊 REPORTE CONSOLIDADO DE VENTAS              │
-│                                                 │
-│  Total Ventas:           $113,220.50           │
-│  Total Transacciones:    400                   │
-│  Ticket Promedio:        $283.05               │
-│  Sucursales:             3                     │
-│  Vendedores:             10                    │
-│  Productos Únicos:       27                    │
-│                                                 │
-│  [Gráfico: Ventas por Sucursal]               │
-│  [Gráfico: Distribución por Categoría]        │
-│  [Gráfico: Tendencia Temporal]                │
-└─────────────────────────────────────────────────┘
-```
+### 🎯 Dashboard Ejecutivo
 
-### Hoja "Datos_Consolidados"
-Tabla formateada con todos los registros consolidados, incluyendo columna calculada `Total_Venta`.
+**KPIs Principales:**
 
-### Hoja "Top_Productos"
-Rankings lado a lado:
-- Más vendidos por cantidad
-- Más rentables por monto
+![Dashboard KPIs](screenshots/dashboard_kpis.png)
 
-### Hoja "Analisis_Vendedores"
-Tabla con métricas de cada vendedor:
-- Total de ventas
-- Número de transacciones
-- Ticket promedio
+Métricas clave del negocio presentadas de forma clara y profesional: ventas totales, transacciones, ticket promedio, y conteos de sucursales, vendedores y productos.
 
-### Hoja "Resumen_Sucursales"
-Comparativa entre sucursales con participación porcentual.
+**Visualizaciones Integradas:**
+
+![Dashboard Gráficos](screenshots/dashboard_ejemplo.png)
+
+Tres gráficos profesionales insertados directamente en Excel:
+- 📊 **Ventas por Sucursal** - Comparativa visual del desempeño por ubicación
+- 🥧 **Distribución por Categoría** - Participación de cada línea de productos
+- 📈 **Tendencia Temporal** - Evolución diaria de las ventas
+
+### 📋 Datos Consolidados
+
+![Datos Consolidados](screenshots/datos_consolidados.png)
+
+Tabla formateada con todos los registros de ventas consolidados, incluyendo columna calculada `Total_Venta`. Headers con formato profesional, bordes sutiles y números formateados correctamente.
+
+### 🏆 Top Productos
+
+![Top Productos](screenshots/top_productos.png)
+
+Rankings lado a lado mostrando:
+- **Más vendidos por cantidad** - Los productos con mayor volumen de unidades
+- **Más rentables por monto** - Los productos que generan mayores ingresos
+
+### ⚡ Ejecución del Script
+
+![Ejecución Terminal](screenshots/ejecucion_terminal.png)
+
+El script procesa cientos de registros en segundos, mostrando logs detallados del progreso y un resumen final con las métricas principales.
 
 ---
 
