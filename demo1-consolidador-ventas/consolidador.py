@@ -276,7 +276,7 @@ def crear_hoja_dashboard(worksheet, stats: dict, graficos_dir: Path):
         worksheet.row_dimensions[fila].height = 25
 
     # ───────────────────────────────────────────────────────────
-    # GRÁFICOS (Optimizados para zoom 100%)
+    # GRÁFICOS (Más pequeños, perfectamente separados)
     # ───────────────────────────────────────────────────────────
 
     # Gráfico 1: Ventas por Sucursal (lado izquierdo)
@@ -286,25 +286,25 @@ def crear_hoja_dashboard(worksheet, stats: dict, graficos_dir: Path):
 
     grafico1_path = graficos_dir / "ventas_sucursal.png"
     if grafico1_path.exists():
-        insertar_imagen_en_excel(worksheet, grafico1_path, f'B{fila_grafico1 + 1}', escala=0.40)
+        insertar_imagen_en_excel(worksheet, grafico1_path, f'B{fila_grafico1 + 1}', escala=0.30)
 
-    # Gráfico 2: Distribución por Categoría (lado derecho, bien separado)
+    # Gráfico 2: Distribución por Categoría (lado derecho, muy separado)
     fila_grafico2 = 13
-    worksheet[f'J{fila_grafico2}'] = '🥧 Distribución por Categoría'
-    worksheet[f'J{fila_grafico2}'].font = Font(name='Calibri', size=12, bold=True, color=COLORES['azul_oscuro'])
+    worksheet[f'K{fila_grafico2}'] = '🥧 Distribución por Categoría'
+    worksheet[f'K{fila_grafico2}'].font = Font(name='Calibri', size=12, bold=True, color=COLORES['azul_oscuro'])
 
     grafico2_path = graficos_dir / "categorias.png"
     if grafico2_path.exists():
-        insertar_imagen_en_excel(worksheet, grafico2_path, f'J{fila_grafico2 + 1}', escala=0.40)
+        insertar_imagen_en_excel(worksheet, grafico2_path, f'K{fila_grafico2 + 1}', escala=0.30)
 
-    # Gráfico 3: Tendencia Temporal (abajo, con amplio espaciado)
-    fila_grafico3 = 32
+    # Gráfico 3: Tendencia Temporal (abajo, bien separado)
+    fila_grafico3 = 28
     worksheet[f'B{fila_grafico3}'] = '📈 Tendencia de Ventas Diarias'
     worksheet[f'B{fila_grafico3}'].font = Font(name='Calibri', size=12, bold=True, color=COLORES['azul_oscuro'])
 
     grafico3_path = graficos_dir / "tendencia.png"
     if grafico3_path.exists():
-        insertar_imagen_en_excel(worksheet, grafico3_path, f'B{fila_grafico3 + 1}', escala=0.45)
+        insertar_imagen_en_excel(worksheet, grafico3_path, f'B{fila_grafico3 + 1}', escala=0.35)
 
     logger.info("  ✓ Dashboard creado con KPIs y gráficos")
 
