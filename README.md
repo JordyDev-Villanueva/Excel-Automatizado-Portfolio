@@ -1,5 +1,10 @@
 # 📊 Excel Automatizado - Portafolio
 
+![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-2.1.4-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Excel](https://img.shields.io/badge/Excel-Automation-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
+
 > Soluciones prácticas de automatización de Excel con Python que resuelven problemas empresariales reales.
 
 ---
@@ -165,9 +170,11 @@ No solo funciona, sino que está hecho pensando en que alguien más pueda entend
 
 ## 📞 Contacto
 
-Si necesitas ayuda con automatización de Excel, análisis de datos o tienes un proyecto en mente, puedes contactarme a través de:
+Si necesitas ayuda con automatización de Excel, análisis de datos o tienes un proyecto en mente, puedes contactarme:
 
+- 🌐 **Portfolio:** [portfolio-web-six-gules.vercel.app](https://portfolio-web-six-gules.vercel.app)
 - 💼 **GitHub:** [@JordyDev-Villanueva](https://github.com/JordyDev-Villanueva)
+- 📧 **Email:** jordy.2023.villmar@gmail.com
 - 💼 **Fiverr:** _[Próximamente]_
 - 💼 **Upwork:** _[Próximamente]_
 
