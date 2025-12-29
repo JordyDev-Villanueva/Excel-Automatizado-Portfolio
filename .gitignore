@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos temporales
+*.log
+*.tmp
+*.bak
+~$*.xlsx
+~$*.xls
+
+# Output temporal (MANTENER SOLO UN EJEMPLO)
+# Ignorar gráficos temporales pero mantener la carpeta
+demo1-consolidador-ventas/output/graficos_temp/*.png
+demo2-limpiador-datos/output/*.xlsx
+demo2-limpiador-datos/output/graficos_temp/*.png
+
+# NO ignorar el Excel de ejemplo del Demo 1 (lo queremos en el repo)
+# !demo1-consolidador-ventas/output/reporte_consolidado.xlsx
