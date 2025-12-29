@@ -195,5 +195,5 @@ Si este repositorio te resulta útil o te inspira para automatizar tus propios p
 
 ---
 
-**Última actualización:** Diciembre 2024
+**Última actualización:** Diciembre 2025
 **Estado:** ✅ Activo - Demo 1 disponible

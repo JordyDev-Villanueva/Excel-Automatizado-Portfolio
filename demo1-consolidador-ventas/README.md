@@ -337,7 +337,7 @@ Este script es ideal para:
 
 **Autor:** Excel Automatizado
 **Proyecto:** Demo 1 - Consolidador de Ventas
-**Fecha:** Diciembre 2024
+**Fecha:** Diciembre 2025
 
 ---
 

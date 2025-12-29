@@ -5,7 +5,7 @@ Módulo con funciones reutilizables para procesamiento, análisis y
 formateo profesional de archivos Excel.
 
 Autor: Excel Automatizado
-Fecha: Diciembre 2024
+Fecha: Diciembre 2025
 """
 
 import logging

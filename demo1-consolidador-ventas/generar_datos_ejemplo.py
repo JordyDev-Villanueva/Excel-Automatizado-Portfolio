@@ -5,7 +5,7 @@ Script que genera archivos Excel de ejemplo con datos realistas
 de ventas de 3 sucursales para demostrar el consolidador.
 
 Autor: Excel Automatizado
-Fecha: Diciembre 2024
+Fecha: Diciembre 2025
 """
 
 import sys
