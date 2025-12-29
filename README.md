@@ -1,51 +1,63 @@
-# 🤖 Excel Automatizado - Portafolio de Automatización
+# 📊 Excel Automatizado - Portafolio
 
-> **Soluciones profesionales de automatización de Excel con Python**
->
-> Demos funcionales que muestran capacidades de automatización, análisis de datos y generación de reportes ejecutivos.
+> Soluciones prácticas de automatización de Excel con Python que resuelven problemas empresariales reales.
 
 ---
 
-## 👋 Sobre Este Repositorio
+## 👋 Bienvenido
 
-Este repositorio contiene **demos completos y funcionales** de automatización de Excel usando Python. Cada demo resuelve un problema empresarial real y demuestra habilidades profesionales en:
+Soy un desarrollador especializado en automatización de procesos con Excel y Python. Este repositorio muestra proyectos reales que he desarrollado para optimizar tareas repetitivas, analizar datos y generar reportes ejecutivos de forma automática.
 
-- 📊 **Análisis de datos** con pandas
-- 🎨 **Visualización profesional** con matplotlib/seaborn
-- 📝 **Manipulación avanzada de Excel** con openpyxl
-- 🔄 **Automatización de procesos** repetitivos
-- 💼 **Soluciones empresariales** listas para producción
+Cada demo aquí presentado es funcional, está documentado y resuelve un caso de uso específico que encontrarás en el día a día de muchas empresas.
+
+### 💡 ¿Qué encontrarás aquí?
+
+- **Scripts listos para usar** - Código limpio y bien estructurado
+- **Documentación detallada** - Instrucciones paso a paso para cada demo
+- **Ejemplos reales** - Datos de muestra para probar los scripts
+- **Código reutilizable** - Funciones que puedes adaptar a tus necesidades
 
 ---
 
-## 🎯 Demos Disponibles
+## 🎯 Proyectos Disponibles
 
 ### 1️⃣ [Consolidador de Ventas](demo1-consolidador-ventas/)
-**Problema:** Consolidar reportes de múltiples sucursales manualmente toma 3-4 horas
-**Solución:** Script que automatiza todo en 30 segundos
 
-**Características:**
-- ✅ Consolida múltiples archivos Excel automáticamente
-- ✅ Genera 5 análisis diferentes (sucursales, productos, vendedores, etc.)
-- ✅ Crea 3 gráficos profesionales de alta calidad
-- ✅ Output Excel multi-hoja con formato corporativo
-- ✅ Dashboard ejecutivo con KPIs
+**El problema:**
+Imagina que eres gerente de una empresa con varias sucursales. Cada mes, cada sucursal te envía su Excel de ventas. Tú necesitas consolidar todo, hacer análisis, crear gráficos y presentar un reporte ejecutivo. Manualmente, esto te puede tomar entre 3 a 4 horas.
 
-**Tecnologías:** pandas, openpyxl, matplotlib, seaborn
+**La solución:**
+Este script hace todo el trabajo en menos de 30 segundos. Lee automáticamente todos los archivos, los consolida, calcula métricas, genera gráficos profesionales y crea un reporte ejecutivo listo para presentar.
 
-**[📖 Ver documentación completa →](demo1-consolidador-ventas/README.md)**
+**Lo que hace:**
+- Lee y combina múltiples archivos Excel automáticamente
+- Calcula totales, promedios y participaciones
+- Genera análisis por sucursal, producto, vendedor y categoría
+- Crea gráficos de alta calidad (barras, circular, línea de tendencia)
+- Produce un Excel profesional con 5 hojas: Dashboard, Datos, Top Productos, Vendedores y Resumen
+
+**Tecnologías:** Python, pandas, openpyxl, matplotlib, seaborn
+
+**[📖 Ver documentación completa del proyecto →](demo1-consolidador-ventas/README.md)**
 
 ---
 
-### 2️⃣ [Limpiador de Datos](demo2-limpiador-datos/) *(Próximamente)*
-**Problema:** Datos sucios y errores comunes en archivos Excel
-**Solución:** Limpieza automática con reporte de calidad
+### 2️⃣ [Limpiador y Validador de Datos](demo2-limpiador-datos/) *(En desarrollo)*
 
-**Características:**
-- ✅ Detección de errores comunes
-- ✅ Normalización de formatos
-- ✅ Validación de datos
-- ✅ Reporte de calidad
+**El problema:**
+Recibes archivos Excel con errores: fechas mal formateadas, duplicados, espacios extra, valores faltantes, columnas inconsistentes. Limpiarlos manualmente es tedioso y propenso a errores.
+
+**La solución:**
+Un script que detecta y corrige automáticamente los errores más comunes, normaliza formatos y genera un reporte de calidad de datos.
+
+**Lo que hará:**
+- Detección automática de errores comunes
+- Limpieza de espacios, caracteres especiales y duplicados
+- Normalización de fechas, números y textos
+- Validación de datos según reglas personalizables
+- Reporte detallado de calidad con estadísticas
+
+_Este proyecto estará disponible próximamente._
 
 ---
 
@@ -111,33 +123,17 @@ python consolidador.py
 
 ---
 
-## 💼 Servicios Ofrecidos
+## 💼 ¿En qué puedo ayudarte?
 
-Basándome en estos demos, ofrezco:
+Si tienes procesos repetitivos con Excel que te consumen tiempo, puedo ayudarte a automatizarlos. Algunos ejemplos:
 
-### 🔹 Automatización de Excel
-- Consolidación de múltiples archivos
-- Generación automática de reportes
-- Actualización de dashboards
-- Procesamiento masivo de datos
+- **Consolidación de reportes** - Combinar archivos de diferentes fuentes
+- **Generación automática de dashboards** - KPIs actualizados sin intervención manual
+- **Limpieza de datos** - Normalizar y validar información
+- **Reportes ejecutivos** - Gráficos y análisis listos para presentar
+- **Integración con otras herramientas** - Conectar Excel con bases de datos, APIs o sistemas empresariales
 
-### 🔹 Análisis de Datos
-- Limpieza y normalización
-- Análisis exploratorio
-- Cálculos y métricas personalizadas
-- Detección de patrones
-
-### 🔹 Visualización
-- Gráficos profesionales para presentaciones
-- Dashboards ejecutivos
-- Reportes con formato corporativo
-- Inserción de visualizaciones en Excel
-
-### 🔹 Integración
-- APIs y bases de datos
-- Sistemas ERP/CRM
-- Google Sheets
-- Automatización de workflows
+Cada solución se desarrolla según tus necesidades específicas, con código limpio, documentado y fácil de mantener.
 
 ---
 
@@ -153,57 +149,44 @@ Basándome en estos demos, ofrezco:
 
 ---
 
-## 📊 Casos de Uso Reales
+## 🎓 Sobre el código
 
-Estos scripts son ideales para:
+Todos los scripts en este repositorio están desarrollados siguiendo buenas prácticas:
 
-✅ **Empresas con múltiples sucursales** - Consolidar reportes
-✅ **Equipos de ventas** - Análisis de desempeño
-✅ **Departamentos financieros** - Reportes mensuales
-✅ **Gerencias** - Dashboards ejecutivos
-✅ **Analistas de datos** - Automatizar tareas repetitivas
+- **Código limpio** - Fácil de leer y entender
+- **Bien documentado** - Comentarios claros explicando la lógica
+- **Manejo de errores** - Validaciones para evitar fallos
+- **Modular** - Funciones reutilizables que puedes adaptar
+- **Probado** - Incluye datos de ejemplo para testing
 
----
-
-## 🎓 Características del Código
-
-- ✅ **PEP 8 compliant** - Código limpio y profesional
-- ✅ **Documentación completa** - Docstrings en todas las funciones
-- ✅ **Type hints** - Parámetros tipados
-- ✅ **Manejo de errores** - Try-except robusto
-- ✅ **Logging detallado** - Trazabilidad completa
-- ✅ **Modular y reutilizable** - Fácil de adaptar
-- ✅ **README detallados** - Instrucciones paso a paso
+No solo funciona, sino que está hecho pensando en que alguien más pueda entenderlo, modificarlo y mantenerlo.
 
 ---
 
 ## 📞 Contacto
 
-¿Necesitas automatización personalizada de Excel o análisis de datos?
+Si necesitas ayuda con automatización de Excel, análisis de datos o tienes un proyecto en mente, puedes contactarme a través de:
 
-- 💼 **Fiverr:** [Tu perfil]
-- 💼 **Upwork:** [Tu perfil]
-- 📧 **Email:** tu@email.com
-- 💻 **GitHub:** [@TuUsuario](https://github.com/TuUsuario)
+- 💼 **GitHub:** [@JordyDev-Villanueva](https://github.com/JordyDev-Villanueva)
+- 💼 **Fiverr:** _[Próximamente]_
+- 💼 **Upwork:** _[Próximamente]_
 
 ---
 
 ## 📄 Licencia
 
-Este repositorio es un portafolio de demostración. Los scripts son libres para uso personal y educativo.
+Este repositorio es un portafolio personal que muestra proyectos de demostración. El código está disponible para consulta, aprendizaje y referencia.
 
 ---
 
-## ⭐ ¿Te gustó?
+## ⭐ Agradecimientos
 
-Si encuentras útiles estos demos:
-- ⭐ Dale una estrella al repositorio
-- 🔄 Comparte con otros
-- 💬 Deja comentarios o sugerencias
-- 📧 Contáctame para proyectos personalizados
+Si este repositorio te resulta útil o te inspira para automatizar tus propios procesos:
+- Dale una estrella ⭐ al repo
+- Compártelo con otros que puedan beneficiarse
+- Déjame saber si tienes sugerencias de mejora
 
 ---
 
 **Última actualización:** Diciembre 2024
-**Versión:** 1.0 - Demo 1 completo
-**Estado:** ✅ Producción
+**Estado:** ✅ Activo - Demo 1 disponible
