@@ -98,8 +98,8 @@ Coloca tus archivos Excel de ventas en la carpeta `input/`
 
 | Fecha      | Producto    | Categoría   | Cantidad | Precio_Unitario | Vendedor    | Sucursal |
 |------------|-------------|-------------|----------|-----------------|-------------|----------|
-| 2024-01-05 | Laptop Dell | Electrónica | 2        | 850.00          | Juan Pérez  | Centro   |
-| 2024-01-05 | Mouse USB   | Accesorios  | 5        | 25.00           | Ana López   | Centro   |
+| 2025-01-05 | Laptop Dell | Electrónica | 2        | 850.00          | Juan Pérez  | Centro   |
+| 2025-01-05 | Mouse USB   | Accesorios  | 5        | 25.00           | Ana López   | Centro   |
 
 **Columnas obligatorias:**
 - `Fecha` - Fecha de la venta
@@ -208,7 +208,8 @@ Comparativa entre sucursales con participación porcentual.
 
 ### Gráficos de Alta Calidad
 - ✅ Resolución 300 DPI (calidad impresión)
-- ✅ Tamaño optimizado (10x6 pulgadas)
+- ✅ Tamaño compacto uniforme (3x2.5 pulgadas)
+- ✅ Layout horizontal para visualización completa
 - ✅ Estilo profesional con seaborn
 - ✅ Colores armoniosos
 - ✅ Títulos y labels claros
@@ -290,14 +291,14 @@ def analizar_mi_metrica(df: pd.DataFrame) -> pd.DataFrame:
 El script genera logs detallados en consola:
 
 ```
-2024-12-29 10:30:15 | INFO     | ============================================================
-2024-12-29 10:30:15 | INFO     | CONSOLIDADOR DE VENTAS - DEMO 1
-2024-12-29 10:30:15 | INFO     | ============================================================
-2024-12-29 10:30:15 | INFO     |
-2024-12-29 10:30:15 | INFO     | Paso 1: Leyendo archivos Excel...
-2024-12-29 10:30:15 | INFO     | Encontrados 3 archivo(s) para procesar
-2024-12-29 10:30:15 | INFO     |   → Leyendo: ventas_sucursal_centro.xlsx
-2024-12-29 10:30:15 | INFO     |     ✓ 150 registros cargados
+2025-12-29 10:30:15 | INFO     | ============================================================
+2025-12-29 10:30:15 | INFO     | CONSOLIDADOR DE VENTAS - DEMO 1
+2025-12-29 10:30:15 | INFO     | ============================================================
+2025-12-29 10:30:15 | INFO     |
+2025-12-29 10:30:15 | INFO     | Paso 1: Leyendo archivos Excel...
+2025-12-29 10:30:15 | INFO     | Encontrados 3 archivo(s) para procesar
+2025-12-29 10:30:15 | INFO     |   → Leyendo: ventas_sucursal_centro.xlsx
+2025-12-29 10:30:15 | INFO     |     ✓ 150 registros cargados
 ...
 ```
 

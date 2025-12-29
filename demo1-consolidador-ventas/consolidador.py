@@ -276,37 +276,34 @@ def crear_hoja_dashboard(worksheet, stats: dict, graficos_dir: Path):
         worksheet.row_dimensions[fila].height = 25
 
     # ───────────────────────────────────────────────────────────
-    # GRÁFICOS (Más pequeños, perfectamente separados)
+    # GRÁFICOS - Layout VERTICAL con buena separación y centrados
     # ───────────────────────────────────────────────────────────
 
-    # Gráfico 1: Ventas por Sucursal (lado izquierdo)
-    fila_grafico1 = 13
-    worksheet[f'B{fila_grafico1}'] = '📊 Ventas por Sucursal'
-    worksheet[f'B{fila_grafico1}'].font = Font(name='Calibri', size=12, bold=True, color=COLORES['azul_oscuro'])
-
+    # Gráfico 1: Ventas por Sucursal (fila 13)
+    worksheet['D13'] = '📊 Ventas por Sucursal'
+    worksheet['D13'].font = Font(name='Calibri', size=12, bold=True, color=COLORES['azul_oscuro'])
     grafico1_path = graficos_dir / "ventas_sucursal.png"
     if grafico1_path.exists():
-        insertar_imagen_en_excel(worksheet, grafico1_path, f'B{fila_grafico1 + 1}', escala=0.30)
+        insertar_imagen_en_excel(worksheet, grafico1_path, 'D14', escala=1.0)
 
-    # Gráfico 2: Distribución por Categoría (lado derecho, muy separado)
-    fila_grafico2 = 13
-    worksheet[f'K{fila_grafico2}'] = '🥧 Distribución por Categoría'
-    worksheet[f'K{fila_grafico2}'].font = Font(name='Calibri', size=12, bold=True, color=COLORES['azul_oscuro'])
-
+    # Gráfico 2: Distribución por Categoría (fila 35)
+    worksheet['D35'] = '🥧 Distribución por Categoría'
+    worksheet['D35'].font = Font(name='Calibri', size=12, bold=True, color=COLORES['azul_oscuro'])
     grafico2_path = graficos_dir / "categorias.png"
     if grafico2_path.exists():
-        insertar_imagen_en_excel(worksheet, grafico2_path, f'K{fila_grafico2 + 1}', escala=0.30)
+        insertar_imagen_en_excel(worksheet, grafico2_path, 'D36', escala=1.0)
 
-    # Gráfico 3: Tendencia Temporal (abajo, bien separado)
-    fila_grafico3 = 28
-    worksheet[f'B{fila_grafico3}'] = '📈 Tendencia de Ventas Diarias'
-    worksheet[f'B{fila_grafico3}'].font = Font(name='Calibri', size=12, bold=True, color=COLORES['azul_oscuro'])
-
+    # Gráfico 3: Tendencia Temporal (fila 61 - separación uniforme de 2 filas)
+    worksheet['D61'] = '📈 Tendencia de Ventas Diarias'
+    worksheet['D61'].font = Font(name='Calibri', size=12, bold=True, color=COLORES['azul_oscuro'])
     grafico3_path = graficos_dir / "tendencia.png"
     if grafico3_path.exists():
-        insertar_imagen_en_excel(worksheet, grafico3_path, f'B{fila_grafico3 + 1}', escala=0.35)
+        insertar_imagen_en_excel(worksheet, grafico3_path, 'D62', escala=1.0)
 
-    logger.info("  ✓ Dashboard creado con KPIs y gráficos")
+    # Configurar zoom al 100% para vista óptima
+    worksheet.sheet_view.zoomScale = 100
+
+    logger.info("  ✓ Dashboard creado con KPIs y gráficos (zoom 100%)")
 
 
 # ═══════════════════════════════════════════════════════════════

@@ -159,7 +159,7 @@ def crear_grafico_barras(
     columna_x: Optional[str] = None,
     columna_y: Optional[str] = None,
     color: str = '#1F4788',
-    figsize: Tuple[int, int] = (10, 6),
+    figsize: Tuple[int, int] = (4, 2.5),
     formato_y: str = 'miles'
 ) -> None:
     """
@@ -172,7 +172,7 @@ def crear_grafico_barras(
         columna_x: Nombre de columna para eje X (si data es DataFrame)
         columna_y: Nombre de columna para eje Y (si data es DataFrame)
         color: Color de las barras (default: azul oscuro)
-        figsize: Tamaño de la figura en pulgadas (default: 10x6)
+        figsize: Tamaño de la figura en pulgadas (default: 4x2.5)
         formato_y: Formato del eje Y ('miles', 'millones', 'porcentaje')
 
     Ejemplo:
@@ -185,8 +185,8 @@ def crear_grafico_barras(
     # Si es Series, usar directamente
     if isinstance(data, pd.Series):
         ax = data.plot(kind='bar', color=color, edgecolor='black', linewidth=0.5)
-        plt.xlabel(data.index.name or '', fontsize=11, fontweight='bold')
-        plt.ylabel('Valor', fontsize=11, fontweight='bold')
+        plt.xlabel(data.index.name or '', fontsize=9, fontweight='bold')
+        plt.ylabel('Valor', fontsize=9, fontweight='bold')
 
     # Si es DataFrame, usar columnas especificadas
     elif isinstance(data, pd.DataFrame):
@@ -194,11 +194,12 @@ def crear_grafico_barras(
             raise ValueError("Para DataFrame, especifica columna_x y columna_y")
         ax = data.plot(x=columna_x, y=columna_y, kind='bar', color=color,
                        edgecolor='black', linewidth=0.5, legend=False)
-        plt.xlabel(columna_x, fontsize=11, fontweight='bold')
-        plt.ylabel(columna_y, fontsize=11, fontweight='bold')
+        plt.xlabel(columna_x, fontsize=9, fontweight='bold')
+        plt.ylabel(columna_y, fontsize=9, fontweight='bold')
 
-    plt.title(titulo, fontsize=14, fontweight='bold', pad=20)
-    plt.xticks(rotation=45, ha='right')
+    plt.title(titulo, fontsize=11, fontweight='bold', pad=10)
+    plt.xticks(rotation=45, ha='right', fontsize=8)
+    plt.yticks(fontsize=8)
 
     # Formato del eje Y
     if formato_y == 'miles':
@@ -209,7 +210,7 @@ def crear_grafico_barras(
         ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f'{x:.1f}%'))
 
     plt.tight_layout()
-    plt.savefig(output_path, dpi=300, bbox_inches='tight')
+    plt.savefig(output_path, dpi=150, bbox_inches='tight')
     plt.close()
 
     logging.getLogger(__name__).info(f"  ✓ Gráfico guardado: {Path(output_path).name}")
@@ -220,7 +221,7 @@ def crear_grafico_circular(
     titulo: str,
     output_path: Union[str, Path],
     colores: Optional[List[str]] = None,
-    figsize: Tuple[int, int] = (10, 6),
+    figsize: Tuple[int, int] = (4, 3),
     mostrar_porcentaje: bool = True
 ) -> None:
     """
@@ -231,7 +232,7 @@ def crear_grafico_circular(
         titulo: Título del gráfico
         output_path: Ruta donde guardar el gráfico
         colores: Lista de colores hexadecimales (opcional)
-        figsize: Tamaño de la figura en pulgadas (default: 10x6)
+        figsize: Tamaño de la figura en pulgadas (default: 4x3)
         mostrar_porcentaje: Si mostrar porcentajes en las etiquetas
 
     Ejemplo:
@@ -251,13 +252,13 @@ def crear_grafico_circular(
     autopct = autopct_format if mostrar_porcentaje else None
 
     plt.pie(data, labels=data.index, autopct=autopct, startangle=90,
-            colors=colores, textprops={'fontsize': 10})
+            colors=colores, textprops={'fontsize': 8})
 
-    plt.title(titulo, fontsize=14, fontweight='bold', pad=20)
+    plt.title(titulo, fontsize=11, fontweight='bold', pad=10)
     plt.axis('equal')  # Círculo perfecto
 
     plt.tight_layout()
-    plt.savefig(output_path, dpi=300, bbox_inches='tight')
+    plt.savefig(output_path, dpi=150, bbox_inches='tight')
     plt.close()
 
     logging.getLogger(__name__).info(f"  ✓ Gráfico guardado: {Path(output_path).name}")
@@ -270,7 +271,7 @@ def crear_grafico_linea(
     columna_x: Optional[str] = None,
     columna_y: Optional[str] = None,
     color: str = '#1F4788',
-    figsize: Tuple[int, int] = (10, 6),
+    figsize: Tuple[int, int] = (5, 2.5),
     marcar_puntos: bool = True
 ) -> None:
     """
@@ -283,7 +284,7 @@ def crear_grafico_linea(
         columna_x: Nombre de columna para eje X (si data es DataFrame)
         columna_y: Nombre de columna para eje Y (si data es DataFrame)
         color: Color de la línea (default: azul oscuro)
-        figsize: Tamaño de la figura en pulgadas (default: 10x6)
+        figsize: Tamaño de la figura en pulgadas (default: 5x2.5)
         marcar_puntos: Si mostrar marcadores en los puntos
 
     Ejemplo:
@@ -297,28 +298,29 @@ def crear_grafico_linea(
 
     # Si es Series
     if isinstance(data, pd.Series):
-        plt.plot(data.index, data.values, color=color, linewidth=2,
-                marker=marker, markersize=6, markerfacecolor='white',
-                markeredgewidth=2, markeredgecolor=color)
-        plt.xlabel(data.index.name or 'Fecha', fontsize=11, fontweight='bold')
-        plt.ylabel('Valor', fontsize=11, fontweight='bold')
+        plt.plot(data.index, data.values, color=color, linewidth=1.5,
+                marker=marker, markersize=4, markerfacecolor='white',
+                markeredgewidth=1.5, markeredgecolor=color)
+        plt.xlabel(data.index.name or 'Fecha', fontsize=9, fontweight='bold')
+        plt.ylabel('Valor', fontsize=9, fontweight='bold')
 
     # Si es DataFrame
     elif isinstance(data, pd.DataFrame):
         if not columna_x or not columna_y:
             raise ValueError("Para DataFrame, especifica columna_x y columna_y")
-        plt.plot(data[columna_x], data[columna_y], color=color, linewidth=2,
-                marker=marker, markersize=6, markerfacecolor='white',
-                markeredgewidth=2, markeredgecolor=color)
-        plt.xlabel(columna_x, fontsize=11, fontweight='bold')
-        plt.ylabel(columna_y, fontsize=11, fontweight='bold')
+        plt.plot(data[columna_x], data[columna_y], color=color, linewidth=1.5,
+                marker=marker, markersize=4, markerfacecolor='white',
+                markeredgewidth=1.5, markeredgecolor=color)
+        plt.xlabel(columna_x, fontsize=9, fontweight='bold')
+        plt.ylabel(columna_y, fontsize=9, fontweight='bold')
 
-    plt.title(titulo, fontsize=14, fontweight='bold', pad=20)
-    plt.xticks(rotation=45, ha='right')
+    plt.title(titulo, fontsize=11, fontweight='bold', pad=10)
+    plt.xticks(rotation=45, ha='right', fontsize=7)
+    plt.yticks(fontsize=8)
     plt.grid(True, alpha=0.3)
 
     plt.tight_layout()
-    plt.savefig(output_path, dpi=300, bbox_inches='tight')
+    plt.savefig(output_path, dpi=150, bbox_inches='tight')
     plt.close()
 
     logging.getLogger(__name__).info(f"  ✓ Gráfico guardado: {Path(output_path).name}")
